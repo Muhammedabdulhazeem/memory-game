@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import SingleCard from './components/SingleCard';
+import { runFireworks } from './utils';
+
 
 const cardImages = [
   // {"src": "/img/helmet-1.png",matched: false},
@@ -95,6 +97,9 @@ function App() {
   useEffect(() => {
     shuffleCard()
   }, [])
+
+  
+    if(allMatched) runFireworks();
 
 
   return (
